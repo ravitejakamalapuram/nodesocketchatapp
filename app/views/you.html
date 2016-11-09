@@ -1,0 +1,13 @@
+<div class="loginPage" id=inputName ng-if="!(nameOk && submitted && notempty)">
+	<form name="form" class="css-form submitName" novalidate>
+		<label class="control-label"> What is your Nick Name ?</label>
+		<div class="controls">
+			<input type="text" id="nickname" ng-model="nickname2" name="nickname" submitted=submitted ng-click="submitted=false" autocomplete="off" required nickname />
+			<span class="help-inline" ng-if="!notempty">Required</span>
+			<span class="help-inline" ng-if="!nameOk">This nickname is already taken!</span>
+		</div>
+		<button type="submit" class="btn btn-primary" ng-click="checkName(nickname2);">Submit</button>
+	</form>
+</div>
+
+<div ui-view></div>
